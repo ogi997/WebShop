@@ -1,0 +1,28 @@
+.cardEffect {
+  background-color: white;
+  padding: 15px;
+  border-radius: 10px;
+  word-wrap: break-word;
+}
+
+.profile {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+}
+
+.resetP {
+  margin: 0;
+  padding: 3px;
+}
+
+.question {
+  height: 250px;
+  overflow: hidden;
+  overflow-y: scroll;
+}
+
+.fixed {
+  position: sticky;
+  top: 5%;
+}

@@ -1,0 +1,80 @@
+<div class="background">
+  <div class="cardEffect">
+    <h1>Dodaj novi oglas</h1>
+
+    <div class="col-md-12">
+      <form [formGroup]="form">
+<!--      {{categ}}-->
+        <div class="row" style="margin-bottom: 10px;">
+          <div class="col">
+            <label for="title" class="form-label">Title*</label>
+            <input required type="text" class="form-control" id="title" formControlName="title" name="title">
+          </div>
+
+          <div class="col">
+            <label for="price" class="form-label">Price*</label>
+            <input required type="number" class="form-control" id="price" formControlName="price" name="price">
+          </div>
+        </div>
+
+        <div class="row" style="margin-bottom: 10px;">
+          <div class="col">
+            <p>Category</p>
+            <select required (change)="handleChangeCategory()" class="form-select" formControlName="categoryId" name="categoryId">
+              <option *ngFor="let category of categoriesArray" [value]="category.id" >{{category.name}}</option>
+            </select>
+          </div>
+          <div class="col">
+            <p>Stanje</p>
+            <select required class="form-select" formControlName="conditionProduct" name="conditionProduct">
+<!--              <option selected>Select condition</option>-->
+              <option value="Nov">Nov</option>
+              <option value="Polovan">Polovan</option>
+            </select>
+          </div>
+
+        </div>
+
+        <div class="row" style="margin-bottom: 10px;" *ngIf="attributes">
+          <div class="col-md-6" *ngFor="let attr of attributes">
+            <label class="form-label" [for]="attr.id">{{attr.name}}</label>
+            <input required class="form-control" [id]="attr.id" [formControlName]="attr.id" type="text" />
+          </div>
+        </div>
+
+        <div class="row" style="margin-bottom: 10px;">
+          <div class="col">
+            <label for="location" class="form-label">Location*</label>
+            <input required class="form-control" id="Location" type="text" formControlName="location" name="location" />
+          </div>
+        </div>
+
+        <div class="row" style="margin-bottom: 10px;">
+          <div class="col">
+            <div class="input-group mb-3">
+              <input required type="file" class="form-control" multiple id="slike" name="slike" (change)="handleImageChange($event)" >
+            </div>
+          </div>
+          <p style="margin-top: -13px; font-size: 13px;"><i>Selektujte sve slike koje zelite da postavite.</i></p>
+        </div>
+
+        <div class="row" style="margin-bottom: 10px;">
+          <div class="col">
+            <label for="description" class="form-label">Description*</label>
+            <textarea required class="form-control" id="description" formControlName="description" name="description"></textarea>
+          </div>
+
+          <div class="col">
+            <label for="contact" class="form-label">Contact*</label>
+            <textarea required class="form-control" id="contact" formControlName="contact" name="contact"></textarea>
+          </div>
+        </div>
+
+        <div class="col">
+          <input (click)="dodajOglas(form)" [disabled]="!form.valid" type="submit" id="submit" class="btn btn-primary w-100" [value]="form.valid ? 'Dodaj oglas' : 'Popuni formu' " />
+        </div>
+
+      </form>
+    </div>
+  </div>
+</div>

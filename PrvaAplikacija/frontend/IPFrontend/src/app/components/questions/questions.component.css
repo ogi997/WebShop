@@ -1,0 +1,11 @@
+.background {
+  background-color: #ecf0f1;
+  padding: 20px 10px 20px 10px;
+}
+
+.cardEffect {
+  background-color: white;
+  padding: 15px;
+  border-radius: 10px;
+  word-wrap: break-word;
+}

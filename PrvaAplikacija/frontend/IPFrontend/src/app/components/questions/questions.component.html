@@ -1,0 +1,47 @@
+<div class="background">
+  <div class="cardEffect overflow-scroll" style="height: 441px">
+    <h1> Pitanja za proizvode</h1>
+    <div class="container text-center">
+    <div class="row text-center d-flex justify-content-center" style="padding: 15px">
+      <mat-spinner *ngIf="loading"></mat-spinner>
+      <div *ngIf="questionShow.length === 0"><h2 style="padding: 15px;">Nema pitanja.</h2></div>
+<!--      <div style="border: 1px solid black;">-->
+    <div class="col-md-3 card" style="padding: 5px; margin: 5px; width: auto;" *ngFor="let question of questionShow">
+      <h3><b>Ko salje:</b><i> {{question.username}}</i></h3>
+      <h3><b>Za proizvod:</b><i> {{question.productTitle}}</i></h3>
+      <button [disabled]="question.answered" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#odgovorNaPitanje" (click)="getIdPitanja(question.idPitanja)">Odgovori</button>
+<!--      <p><b>Pitanje:</b><i> {{question.value}}</i></p>-->
+<!--    </div>-->
+      </div>
+    </div>
+    </div>
+  </div>
+</div>
+
+
+<!--modal za odgovor na pitanje-->
+<div class="modal fade" id="odgovorNaPitanje" tabindex="-1" aria-labelledby="labelOdgovorNaPitanje" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="labelOdgovorNaPitanje">Odgovori na pitanje</h1>
+        <button #closebuttonOdgovor type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <h3>Pitanje glasi:</h3>
+        <p>{{this.selectedQuestion?.value}}</p>
+
+        <textarea class="form-control" [(ngModel)]="selectedAnswer"></textarea>
+
+        <!--        <div class="input-group">-->
+        <!--        <p>Kupujete proizvod sa ID: {{productId}}</p>-->
+
+        <!--        </div>-->
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Izadji</button>
+        <button type="button" class="btn btn-primary" (click)="odgovori()">Odgovori</button>
+      </div>
+    </div>
+  </div>
+</div>

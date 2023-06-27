@@ -1,0 +1,13 @@
+<div class="background centered" style="min-height: calc(100% - 52px - 96px);">
+  <div class="cardEffect">
+    <h1>Activate account</h1>
+    <p>Unesite PIN koji je stigao na Vas e-mail.</p>
+      <div class="mb-3">
+        <label for="pin" class="form-label">PIN</label>
+        <input [(ngModel)]="selectedPin" type="number" [min]="1000" [max]="9999" class="form-control" id="pin" aria-describedby="pinHelp" />
+      </div>
+
+    <button class="btn btn-primary w-100" (click)="checkPinCode()">Activate</button>
+
+  </div>
+</div>

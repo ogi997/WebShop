@@ -1,0 +1,108 @@
+2023-06-11 15:48:59 [main] INFO  c.e.ipbackend.IpBackendApplication - Starting IpBackendApplication using Java 17.0.7 with PID 35494 (/home/ognjen/Desktop/Internet programiranje/projekat/PrvaAplikacija/backend/IPBackend/target/classes started by ognjen in /home/ognjen/Desktop/Internet programiranje/projekat/PrvaAplikacija/backend/IPBackend)
+2023-06-11 15:48:59 [main] INFO  c.e.ipbackend.IpBackendApplication - No active profile set, falling back to 1 default profile: "default"
+2023-06-11 15:49:02 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2023-06-11 15:49:02 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-06-11 15:49:03 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 453 ms. Found 15 JPA repository interfaces.
+2023-06-11 15:49:04 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2023-06-11 15:49:04 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2023-06-11 15:49:04 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.8]
+2023-06-11 15:49:04 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2023-06-11 15:49:04 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 4813 ms
+2023-06-11 15:49:04 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2023-06-11 15:49:06 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@3c88191b
+2023-06-11 15:49:06 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2023-06-11 15:49:07 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-06-11 15:49:07 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.2.2.Final
+2023-06-11 15:49:07 [main] INFO  org.hibernate.cfg.Environment - HHH000406: Using bytecode reflection optimizer
+2023-06-11 15:49:07 [main] INFO  o.h.b.i.BytecodeProviderInitiator - HHH000021: Bytecode provider name : bytebuddy
+2023-06-11 15:49:08 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-06-11 15:49:08 [main] INFO  org.hibernate.orm.dialect - HHH035001: Using dialect: org.hibernate.dialect.MySQLDialect, version: 8.0.31
+2023-06-11 15:49:08 [main] INFO  o.h.b.i.BytecodeProviderInitiator - HHH000021: Bytecode provider name : bytebuddy
+2023-06-11 15:49:09 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-06-11 15:49:09 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-06-11 15:49:10 [main] INFO  o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2023-06-11 15:49:11 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-06-11 15:49:12 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2023-06-11 15:49:12 [main] INFO  c.e.ipbackend.IpBackendApplication - Started IpBackendApplication in 14.691 seconds (process running for 16.973)
+2023-06-11 15:49:30 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-06-11 15:49:30 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2023-06-11 15:49:30 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 7 ms
+2023-06-11 15:49:30 [http-nio-8080-exec-1] ERROR c.e.i.controllers.ProductController - Filtriranje po category
+2023-06-11 15:51:58 [http-nio-8080-exec-4] ERROR c.e.i.controllers.SupplyController - GET all active supply
+2023-06-11 15:51:58 [http-nio-8080-exec-8] ERROR c.e.i.controllers.ProductController - GET product ID
+2023-06-11 15:51:58 [http-nio-8080-exec-9] ERROR c.e.i.c.ProductImageController - GET cover image for product id
+2023-06-11 15:52:27 [http-nio-8080-exec-2] ERROR c.e.i.controllers.SupplyController - GET all active supply
+2023-06-11 15:52:27 [http-nio-8080-exec-1] ERROR c.e.i.controllers.ProductController - GET product ID
+2023-06-11 15:52:27 [http-nio-8080-exec-3] ERROR c.e.i.c.ProductImageController - GET cover image for product id
+2023-06-11 15:52:57 [http-nio-8080-exec-4] ERROR c.e.i.controllers.ProductController - Filtriranje po category
+2023-06-11 15:59:58 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-06-11 15:59:58 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2023-06-11 15:59:58 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2023-06-11 16:00:23 [main] INFO  c.e.ipbackend.IpBackendApplication - Starting IpBackendApplication using Java 17.0.7 with PID 36413 (/home/ognjen/Desktop/Internet programiranje/projekat/PrvaAplikacija/backend/IPBackend/target/classes started by ognjen in /home/ognjen/Desktop/Internet programiranje/projekat/PrvaAplikacija/backend/IPBackend)
+2023-06-11 16:00:23 [main] INFO  c.e.ipbackend.IpBackendApplication - No active profile set, falling back to 1 default profile: "default"
+2023-06-11 16:00:25 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2023-06-11 16:00:25 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-06-11 16:00:25 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 203 ms. Found 15 JPA repository interfaces.
+2023-06-11 16:00:26 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2023-06-11 16:00:26 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2023-06-11 16:00:26 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.8]
+2023-06-11 16:00:26 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2023-06-11 16:00:26 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2714 ms
+2023-06-11 16:00:26 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2023-06-11 16:00:27 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@38029686
+2023-06-11 16:00:27 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2023-06-11 16:00:27 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-06-11 16:00:27 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.2.2.Final
+2023-06-11 16:00:27 [main] INFO  org.hibernate.cfg.Environment - HHH000406: Using bytecode reflection optimizer
+2023-06-11 16:00:28 [main] INFO  o.h.b.i.BytecodeProviderInitiator - HHH000021: Bytecode provider name : bytebuddy
+2023-06-11 16:00:28 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-06-11 16:00:28 [main] INFO  org.hibernate.orm.dialect - HHH035001: Using dialect: org.hibernate.dialect.MySQLDialect, version: 8.0.31
+2023-06-11 16:00:28 [main] INFO  o.h.b.i.BytecodeProviderInitiator - HHH000021: Bytecode provider name : bytebuddy
+2023-06-11 16:00:30 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-06-11 16:00:30 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-06-11 16:00:31 [main] INFO  o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2023-06-11 16:00:33 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-06-11 16:00:33 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2023-06-11 16:00:33 [main] INFO  c.e.ipbackend.IpBackendApplication - Started IpBackendApplication in 11.266 seconds (process running for 12.854)
+2023-06-11 16:01:08 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-06-11 16:01:08 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2023-06-11 16:01:08 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2023-06-11 16:01:21 [main] INFO  c.e.ipbackend.IpBackendApplication - Starting IpBackendApplication using Java 17.0.7 with PID 36583 (/home/ognjen/Desktop/Internet programiranje/projekat/PrvaAplikacija/backend/IPBackend/target/classes started by ognjen in /home/ognjen/Desktop/Internet programiranje/projekat/PrvaAplikacija/backend/IPBackend)
+2023-06-11 16:01:21 [main] INFO  c.e.ipbackend.IpBackendApplication - No active profile set, falling back to 1 default profile: "default"
+2023-06-11 16:01:23 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2023-06-11 16:01:23 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-06-11 16:01:23 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 184 ms. Found 15 JPA repository interfaces.
+2023-06-11 16:01:24 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2023-06-11 16:01:24 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2023-06-11 16:01:24 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.8]
+2023-06-11 16:01:24 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2023-06-11 16:01:24 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2940 ms
+2023-06-11 16:01:24 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2023-06-11 16:01:25 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@38029686
+2023-06-11 16:01:25 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2023-06-11 16:01:25 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-06-11 16:01:25 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.2.2.Final
+2023-06-11 16:01:25 [main] INFO  org.hibernate.cfg.Environment - HHH000406: Using bytecode reflection optimizer
+2023-06-11 16:01:26 [main] INFO  o.h.b.i.BytecodeProviderInitiator - HHH000021: Bytecode provider name : bytebuddy
+2023-06-11 16:01:26 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-06-11 16:01:26 [main] INFO  org.hibernate.orm.dialect - HHH035001: Using dialect: org.hibernate.dialect.MySQLDialect, version: 8.0.31
+2023-06-11 16:01:26 [main] INFO  o.h.b.i.BytecodeProviderInitiator - HHH000021: Bytecode provider name : bytebuddy
+2023-06-11 16:01:28 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-06-11 16:01:28 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-06-11 16:01:29 [main] INFO  o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2023-06-11 16:01:31 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-06-11 16:01:32 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2023-06-11 16:01:32 [main] INFO  c.e.ipbackend.IpBackendApplication - Started IpBackendApplication in 13.437 seconds (process running for 15.56)
+2023-06-11 16:03:40 [http-nio-8080-exec-2] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-06-11 16:03:40 [http-nio-8080-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2023-06-11 16:03:40 [http-nio-8080-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2023-06-11 16:03:40 [http-nio-8080-exec-2] ERROR c.e.i.controllers.ProductController - Filtriranje
+2023-06-11 16:04:14 [http-nio-8080-exec-3] ERROR c.e.i.controllers.ProductController - Filtriranje
+2023-06-11 16:04:21 [http-nio-8080-exec-4] ERROR c.e.i.controllers.ProductController - Filtriranje
+2023-06-11 16:04:40 [http-nio-8080-exec-5] ERROR c.e.i.controllers.ProductController - Filtriranje
+2023-06-11 16:04:45 [http-nio-8080-exec-6] ERROR c.e.i.controllers.ProductController - Filtriranje
+2023-06-11 16:04:57 [http-nio-8080-exec-7] ERROR c.e.i.controllers.ProductController - Filtriranje
+2023-06-11 16:05:05 [http-nio-8080-exec-8] ERROR c.e.i.controllers.ProductController - Filtriranje
+2023-06-11 16:05:18 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-06-11 16:05:18 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2023-06-11 16:05:18 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.

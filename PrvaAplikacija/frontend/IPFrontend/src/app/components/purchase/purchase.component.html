@@ -1,0 +1,31 @@
+<div class="background">
+  <div class="cardEffect">
+    <h1>All purchase</h1>
+    <div class="container text-center">
+
+      <div style="height: 350px; overflow: hidden; overflow-y: scroll;">
+      <div class="row text-center d-flex justify-content-center" style="margin: 0; padding: 0;">
+
+        <mat-spinner *ngIf="loading"></mat-spinner>
+        <div *ngIf="purchaseItems.length === 0"><h2 style="padding: 15px;">Nema proizvoda</h2></div>
+
+        <div class="col-xs-6 col-md-5 col-lg-4 col-xl-3 text-center" style="padding: 10px; width: auto;" *ngFor="let item of purchaseItems">
+          <div class="card text-center" style="width: 16.5rem;">
+            <img [src]="item.coverImage" class="card-img-top img-thumbnail" style="width: 100%; height: 175px;" alt="slika{{item.title}}">
+            <div class="card-body">
+              <h2 class="card-title">{{item.title}}</h2>
+              <!--        <p class="card-text">{{item.description}}.</p>-->
+              <p class="card-text"><b>Placeno: <i class="bi bi-cash"></i> {{item.price}}KM</b></p>
+              <p class="card-tet"><b>Nacin placanja:</b> {{item.payment}}</p>
+              <!--        <button routerLink="/products/{{item.id}}" class="btn btn-primary"><i class="bi bi-arrow-right-circle"></i> Open item</button>-->
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+
+  </div>
+</div>
+</div>

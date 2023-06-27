@@ -1,0 +1,52 @@
+<!--vidjeti kako ce ova forma da funkcionise tacno-->
+<div class="background">
+  <div class="row justify-content-center" style="margin: 0; padding: 0; width: auto;">
+    <div class="col-md-4 col-sm-8 text-center">
+      <div class="cardEffect" style="margin-bottom: 15px;">
+        <h1>Profile image</h1>
+
+        <div class="d-flex flex-column gap-2">
+          <img [src]="avatar" class="rounded" style="height: 273px; background-repeat: no-repeat; background-size: cover;" alt="avatar" />
+
+          <input type="file" class="form-control" [(ngModel)]="changeImage" (change)="handleImageChange($event)" />
+          <button class="btn btn-primary btn-sm" (click)="updateAvatar()">Change image</button>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="col-md-8">
+      <div class="cardEffect">
+        <h1>Profile information</h1>
+
+        <div>
+          <form [formGroup]="form">
+            <div class="mb-2">
+              <label for="firstName" class="form-label">First name*</label>
+              <input formControlName="firstName" required type="text" class="form-control" id="firstName" aria-describedby="firstName">
+            </div>
+            <div class="mb-3">
+              <label for="lastName" class="form-label">Last name*</label>
+              <input formControlName="lastName" required type="text" class="form-control" id="lastName">
+            </div>
+            <div class="mb-3">
+              <label class="form-check-label" for="password">Password*</label>
+              <input formControlName="password" required type="password" class="form-control" id="password">
+            </div>
+            <div class="mb-3">
+              <label class="form-check-label" for="city">City*</label>
+              <input formControlName="city" required type="text" class="form-control" id="city">
+            </div>
+            <div class="mb-3">
+              <label class="form-check-label" for="email">E-mail*</label>
+              <input formControlName="email" required type="email" class="form-control" id="email">
+            </div>
+            <button type="submit" class="btn btn-primary" (click)="updateProfile()">Update profile</button>
+          </form>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+</div>

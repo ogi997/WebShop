@@ -1,0 +1,44 @@
+<div class="background">
+  <div class="cardEffect">
+    <div class="row" style="margin: 0; padding: 0;">
+      <div class="col-md-6">
+        <h1>Vasi objavljeni oglasi</h1>
+      </div>
+
+      <div class="col-md-6 text-end">
+        <button class="btn btn-primary btn-lg" routerLink="/novi-oglas">Objavi oglas</button>
+      </div>
+    </div>
+  </div>
+
+<!--  aktivne i neaktivne ponude od korisnika-->
+  <div class="cardEffect overflow-scroll" style="padding: 20px; height: 441px;">
+
+    <div class="container">
+      <div class="row d-flex justify-content-center" style="margin: 0; padding: 0">
+
+        <mat-spinner *ngIf="loading"></mat-spinner>
+        <div *ngIf="oglasiShow.length === 0"><h2 style="padding: 15px;">Nema oglasa.</h2></div>
+
+        <div class="col-xs-6 col-md-5 col-lg-4 col-xl-3" style="padding: 10px; width: auto;" *ngFor="let item of oglasiShow">
+          <div class="card" style="width: 16.5rem; cursor: pointer">
+            <img [src]="item.cover" class="card-img-top img-thumbnail" style="width: 100%; height: 175px;" alt="slika{{item.id}}">
+            <div class="card-body">
+              <h2 class="card-title">{{item.productTitle}}</h2>
+              <span *ngIf="(item.productActive == 1); else nijeAktivno" style="font-size: 15px; margin-bottom: 15px" class="badge text-bg-success rounded-pill">Aktivan</span>
+              <ng-template #nijeAktivno><span style="font-size: 15px; margin-bottom: 15px;" class="badge text-bg-danger rounded-pill">Nije aktivan</span></ng-template>
+              <p class="card-text"><b><i class="bi bi-cash"></i> {{item.productPrice}}KM</b></p>
+              <div class="btn-group" role="group" aria-label="Basic example">
+                <button type="button" class="btn btn-outline-warning" *ngIf="item.productActive == 1; else aktivirajOglas" (click)="changeActiveZavrsi(item.productId)" >Zavrsi</button>
+                <ng-template #aktivirajOglas><button type="button" class="btn btn-outline-success" (click)="changeActiveVrati(item.productId)">Vrati</button></ng-template>
+                <button type="button" class="btn btn-outline-danger" (click)="softDelete(item.productId)" >Delete</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+  </div>
+</div>
+</div>

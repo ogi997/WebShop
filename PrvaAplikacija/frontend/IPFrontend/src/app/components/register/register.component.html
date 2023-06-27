@@ -1,0 +1,59 @@
+<div class="background" style="min-height: calc(100% - 52px - 96px);">
+
+      <div class="cardEffect">
+
+        <h1>Registration page</h1>
+          <div class="col-md-12">
+              <form [formGroup]="form">
+                <div class="row" style="margin-bottom: 10px">
+                  <div class="col">
+                    <label for="firstName" class="form-label">First name*</label>
+                    <input required type="text" class="form-control" id="firstName" formControlName="firstName" name="firstName" aria-describedby="firstName">
+                  </div>
+                  <div class="col">
+                    <label for="lastName" class="form-label">Last name*</label>
+                    <input required type="text" class="form-control" id="lastName" formControlName="lastName" name="lastName">
+                  </div>
+                </div>
+
+                <div class="row" style="margin-bottom: 10px">
+                  <div class="col">
+                    <label class="form-check-label" for="username">Username*</label>
+                    <input required type="text" class="form-control" id="username" formControlName="username" name="username">
+                  </div>
+                  <div class="col">
+                    <label class="form-check-label" for="password">Password*</label>
+                    <input required type="password" class="form-control" id="password" formControlName="password" name="password">
+                  </div>
+                </div>
+
+                <div class="row" style="margin-bottom: 10px">
+                  <div class="col">
+                    <label class="form-check-label" for="city">City*</label>
+                    <input required type="text" class="form-control" id="city" formControlName="city" name="city">
+                  </div>
+                  <div class="col">
+                    <label class="form-check-label" for="email">E-mail*</label>
+                    <input required type="email" class="form-control" id="email" formControlName="email" name="email">
+                  </div>
+                </div>
+
+                <div class="row">
+                  <div class="col">
+                    <div class="input-group mb-3">
+                      <label class="input-group-text" for="avatar">Avatar</label>
+                      <input type="file" class="form-control" id="avatar" (change)="handleImageChange($event)" name="avatar">
+                    </div>
+                  </div>
+                </div>
+                <p style="font-size: 13px; margin-top: -13px"><i>Avatar is not required.</i></p>
+
+                <div class="row">
+                  <input [disabled]="!form.valid" (click)="register(form)" type="submit" id="submit" class="btn btn-primary btn-lg" [value]="form.valid ? 'Register' : 'Popunite formu'" />
+                </div>
+              </form>
+<!--            <input type="submit" class="btn btn-primary btn-lg" value="Register" />-->
+        </div>
+    </div>
+</div>
+

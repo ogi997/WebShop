@@ -1,0 +1,50 @@
+<nav class="navbar navbar-expand-lg bg-primary">
+  <div class="container-fluid">
+    <a class="navbar-brand" routerLink="/">WEB-SHOP</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarText">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link" aria-current="page" routerLink="/">Home</a>
+        </li>
+        <li *ngIf="userData === undefined" class="nav-item">
+          <a class="nav-link" routerLink="/register">Register</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/products">Products</a>
+        </li>
+
+<!--        ako korisnik nije prijavljen ne smije da se vidi-->
+        <li *ngIf="userData !== undefined" class="nav-item">
+          <a class="nav-link" routerLink="/profile">Profile</a>
+        </li>
+        <li *ngIf="userData !== undefined" class="nav-item">
+          <a class="nav-link" routerLink="/purchase">Purchase</a>
+        </li>
+        <li *ngIf="userData !== undefined" class="nav-item">
+          <a class="nav-link" routerLink="/oglasi">Oglasi</a>
+        </li>
+        <li *ngIf="userData !== undefined" class="nav-item">
+          <a class="nav-link" routerLink="/novi-oglas">Novi oglas</a>
+        </li>
+        <li *ngIf="userData !== undefined" class="nav-item">
+          <a class="nav-link" routerLink="/question">Pitanja</a>
+        </li>
+        <li *ngIf="userData !== undefined" class="nav-item">
+          <a class="nav-link" routerLink="/support">Support</a>
+        </li>
+      </ul>
+
+      <span *ngIf="userData === undefined; else odjava" class="navbar-text">
+        <a class="nav-link" routerLink="/login">Login</a>
+      </span>
+      <ng-template #odjava>
+        <span class="navbar-text">
+          <button class="nav-link btn" (click)="logout()">Odjava</button>
+        </span>
+      </ng-template>
+    </div>
+  </div>
+</nav>

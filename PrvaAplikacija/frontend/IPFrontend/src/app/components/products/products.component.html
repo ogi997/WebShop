@@ -1,0 +1,108 @@
+
+<div class="cardEffect" style="padding: 20px 10px 20px 10px; margin-bottom: 10px">
+  <div class="row">
+
+
+    <div class="col-md-12" style="padding: 10px">
+      <p>Pretrazi po nazivu</p>
+      <div class="input-group mb-3">
+        <input class="form-control" [(ngModel)]="selectedSearchTitle" />
+        <button class="btn btn-primary" (click)="searchByTitle(false)"><i class="bi-search"></i>Search</button>
+      </div>
+    </div>
+
+
+    <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+      Filtriraj proizvode
+    </button>
+<div class="collapse" id="collapseExample">
+
+    <div class="col-md-12" style="padding: 10px">
+      <p>Kategorija</p>
+      <select [(ngModel)]="selectedCategory" (change)="filterData(false)" class="form-select">
+        <option selected value="-1">Sve</option>
+        <option *ngFor="let category of allCategory" [value]="category.id">{{category.name}}</option>
+      </select>
+
+<!--      <button>Filtriraj</button>-->
+      <!--        <button type="button" class="btn btn-primary" size="large">Filtrirajte po kategorijama</button>-->
+    </div>
+
+    <div class="row">
+
+      <form [formGroup]="form">
+
+<!--        atributi za kategorije-->
+        <div *ngFor="let attr of attributes">
+          <label class="form-label" [for]="attr.id">{{attr.name}}</label>
+          <input required class="form-control" [id]="attr.id" [formControlName]="attr.id" type="text" />
+        </div>
+
+<!--        zajednicki atributi za sve proizvode-->
+        <div>
+          <p>Stanje proizvoda</p>
+          <select formControlName="condProduct" name="condProduct" class="form-select" [selectedIndex]="0">
+            <option value="sve">Sve</option>
+            <option value="Nov">Nov</option>
+            <option value="Polovan">Polovan</option>
+          </select>
+
+          <p>Cijena</p>
+          <div class="col">
+            <label class="form-label">Od</label>
+            <input formControlName="priceOd" name="priceOd" class="form-control" type="number" />
+            <label class="form-label">Do</label>
+            <input formControlName="priceDo" name="priceDo" class="form-control" type="number" />
+          </div>
+
+          <label class="form-label">Lokacija</label>
+          <input formControlName="location" name="location" class="form-control" type="text" />
+
+        </div>
+
+        <input style="margin-top: 10px" (click)="filtrirajPodatke(form, false)" type="submit" class="btn btn-primary" value="Osvjezi" />
+      </form>
+
+    </div>
+
+
+  </div>
+</div>
+
+</div>
+
+
+<div class="container text-center scroll" style="border: 1px solid black;">
+
+  <div class="row d-flex justify-content-center" style="margin: 0; padding: 0;">
+    <mat-spinner *ngIf="loading"></mat-spinner>
+    <div *ngIf="items.length === 0"><h2 style="padding: 15px;">Nema proizvoda</h2></div>
+  <div class="col-xs-3 col-md-5 col-lg-4 col-xl-3 text-center" style="padding: 10px; width: auto;" *ngFor="let item of items">
+<!--    {{item}}-->
+
+
+    <div class="card text-center" style="width: 16.5rem; cursor: pointer" (click)="openItem(item.added.id)">
+      <img [src]="item.coverImage" class="card-img-top img-thumbnail" style="width: 100%; height: 175px" alt="slika" />
+      <div class="card-body">
+        <h2 class="card-title">{{item.added.title}}</h2>
+        <p class="card-text"><b><i class="bi bi-cash"></i> {{item.added.price}}KM</b></p>
+      </div>
+    </div>
+
+  </div>
+
+    <mat-paginator #paginator
+                   style="background-color: gray;"
+                   class="demo-paginator"
+                   (page)="onPageChange($event.pageIndex)"
+                   [length]="totalItems"
+                   [pageSize]="1"
+                   [pageIndex]="reset"
+                   [hidePageSize]="true"
+                   aria-label="Select page">
+    </mat-paginator>
+
+</div>
+</div>
+
+
